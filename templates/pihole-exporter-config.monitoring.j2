@@ -1,3 +1,3 @@
-PIHOLE_HOSTNAME={{ pihole_hostname }}
+PIHOLE_HOSTNAME={{ ansible_facts['default_ipv4']['address'] }}
 PIHOLE_PASSWORD={{ pihole_password }}
 PORT=9617
