@@ -46,6 +46,17 @@ services:
       - back-tier
       - front-tier
 
+  pihole-exporter:    
+    expose:
+      - 9617
+    ports:
+      - 9617:9617
+    image: ekofr/pihole-exporter:latest
+    restart: always
+    env_file: ./pihole-exporter/config.monitoring
+    networks:
+      - back-tier    
+
   ping:
     tty: true
     stdin_open: true

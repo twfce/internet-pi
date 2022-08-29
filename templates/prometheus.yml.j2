@@ -21,6 +21,10 @@ scrape_configs:
     scrape_timeout: 60s  # running speedtest needs time to complete
     static_configs:
       - targets: ['speedtest:9798']
+  
+  - job_name: 'pihole'
+    static_configs:
+      - targets: ['pihole-exporer:9617']
 
 {% if shelly_plug_enable %}
   - job_name: 'shelly-plug'

@@ -35,6 +35,8 @@
   loop:
     - src: grafana-config.monitoring.j2
       dest: grafana/config.monitoring
+    - src: pihole-exporter-config.monitoring.j2
+      dest: pihole-exporter/config.monitoring
     - src: prometheus.yml.j2
       dest: prometheus/prometheus.yml
     - src: prometheus-pinghosts.yaml.j2
